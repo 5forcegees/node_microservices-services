@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "reinstall": "for i in $(echo application-configuration cache data-access logging security services); do rm -rf node_modules/$i ; done && npm install"
+    "reinstall": "for i in $(echo application-configuration cache data-access logging security services); do rm -rf node_modules/$i ; done && npm install",
+    "linklibs": "workingDirectory=\"$(pwd)\" && for libraryName in $(echo application-configuration cache data-access error logging security); do rm -rf $workingDirectory/node_modules/$libraryName && ln -s $workingDirectory/../$libraryName node_modules/$libraryName ; done"
   },
   "repository": {
     "type": "git",
