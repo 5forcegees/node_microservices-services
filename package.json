@@ -4,7 +4,8 @@
   "description": "This is configuration wrapper library that uses the data-access layer to make soap calls.  Each service will perform all the necessary transformations on the http request before making the soap request",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "reinstall": "for i in $(echo application-configuration cache data-access logging security services); do rm -rf node_modules/$i ; done && npm install"
   },
   "repository": {
     "type": "git",
