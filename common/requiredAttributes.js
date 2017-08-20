@@ -4,5 +4,6 @@
  */
 
 module.exports = {
-    getData: ['requiredField1', 'requiredField2']
+    getData: ['requiredField1', 'requiredField2'],
+    getHackerNews: ['url']
 };
